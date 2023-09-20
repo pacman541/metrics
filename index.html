@@ -65,6 +65,8 @@
 
 <script type="text/javascript" src="atd_1900.js"></script>
 
+<script type="text/javascript" src="atd_volost_1900.js"></script>
+	
 <script type="text/javascript">
 
 	var style_m = {
@@ -86,14 +88,23 @@
 		};
 
 	var style_d_1900 = {
-		weight: 1,
+		weight: 1.5,
 		opacity: 0.55,
-		color: 'white',
+		color: 'blue',
 		dashArray: '3',
 		fillOpacity: 0.3,
 		fillColor: '#C0C0C0'
 		};
 
+	var style_d_v_1900 = {
+		weight: 0.7,
+		opacity: 0.3,
+		color: 'white',
+		dashArray: '1',
+		fillOpacity: 0.1,
+		fillColor: '#C0C0C0'
+		};
+	
 	var geojson;
 
 	var metrics = L.geoJson(data_m, {
@@ -114,15 +125,22 @@
 	
 	function getColor_m(m) {
 		return 	m === 'хорошая'  ? '#4CBB17' :
-				m === 'средняя'  ? 'yellow' :
-				m === 'плохая'  ? 'red' :
-							'#ff00ff' ;
+			m === 'средняя'  ? 'yellow' :
+			m === 'плохая'  ? 'red' :
+					'#ff00ff' ;
 		}
 	
 	var districts_1900 = L.geoJson(d_1900, {
 			style: style_d_1900,
 			onEachFeature: function(feature, layer) {
 				layer.bindTooltip("<b>" + feature.properties.district + " уезд" + "</b>");
+			  },
+		});
+
+	var volost_1900 = L.geoJson(d_v_1900, {
+			style: style_d_v_1900,
+			onEachFeature: function(feature, layer) {
+				layer.bindTooltip("<b>" + feature.properties.volost + " волость" + "</b>");
 			  },
 		});
 	
@@ -165,8 +183,9 @@
 	
 	var overlayMaps = {
 		"церкви": metrics,
-	    "уездное деление": districts_1900,
-	    "современное АТД": districts_2020,
+		"уездное деление": districts_1900,
+		"волостное деление": volost_1900,
+		"современное АТД": districts_2020,
 	    };
 	
 	var control_layer = L.control.layers(null, overlayMaps, {
