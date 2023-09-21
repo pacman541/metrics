@@ -192,6 +192,11 @@
 		collapsed: false,
 		}).addTo(map);
 
+	//слой metrics всегда поверх других слоев
+	map.on("overlayadd", function (event) {
+		metrics.bringToFront();
+		});
+	
 	function highlightFeature(e) {
 		var layer = e.target;
 
