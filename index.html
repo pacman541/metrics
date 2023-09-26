@@ -71,7 +71,7 @@
 <script type="text/javascript">
 
 	var style_m = {
-		radius: 5.5,
+		radius: 5,
 		fillColor: 'orange',
 		color: 'grey',
 		weight: 0.2,
@@ -114,7 +114,8 @@
 			},
 		style: function style(feature) {
 			return {
-				fillColor: getColor_m(feature.properties.keeping)
+				fillColor: getColor_m(feature.properties.keeping),
+				radius: getRadius_m(feature.properties.id)
 				};
 			},
 		onEachFeature: function(feature, layer) {
@@ -129,6 +130,10 @@
 			m === 'средняя'  ? 'yellow' :
 			m === 'плохая'  ? 'red' :
 					'#ff00ff' ;
+		}
+
+	function getRadius_m(r) {
+		return 	r === 99999  ? 8 :	5 ;
 		}
 	
 	var districts_1900 = L.geoJson(d_1900, {
