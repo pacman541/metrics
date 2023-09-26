@@ -1,6 +1,6 @@
 var data_m = {
 "type": "FeatureCollection",
-"name": "metrics",
+"name": "metrics_data",
 "crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } },
 "features": [
 { "type": "Feature", "properties": { "id": 2009, "settlement": "Виглино", "district": "Весьегонский", "settlement_2": "Виглины", "metrics": "1860-1862", "years": "3", "keeping": "плохая" }, "geometry": { "type": "Point", "coordinates": [ 35.332497, 58.250923 ] } },
@@ -342,6 +342,11 @@ var data_m = {
 { "type": "Feature", "properties": { "id": 4103, "settlement": "", "district": "Кашинский", "settlement_2": "Успенский на болоте", "metrics": "1860-1896, 1901-1918", "years": "55", "keeping": "хорошая" }, "geometry": { "type": "Point", "coordinates": [ 37.09191, 57.41549 ] } },
 { "type": "Feature", "properties": { "id": 4106, "settlement": "", "district": "Кашинский", "settlement_2": "Шелтомеж", "metrics": "1860-1863, 1882-1893, 1897, 1900-1901, 1904-1917", "years": "33", "keeping": "средняя" }, "geometry": { "type": "Point", "coordinates": [ 37.46844, 57.868094 ] } },
 { "type": "Feature", "properties": { "id": 4107, "settlement": "Слободка", "district": "Кашинский", "settlement_2": "Ширинское", "metrics": "1860-1864, 1884-1917", "years": "39", "keeping": "средняя" }, "geometry": { "type": "Point", "coordinates": [ 37.420658, 57.170289 ] } },
-{ "type": "Feature", "properties": { "id": 4110, "settlement": "", "district": "Кашинский", "settlement_2": "Юрьевское", "metrics": "1860-1864, 1884-1886, 1888-1889, 1891-1917", "years": "37", "keeping": "средняя" }, "geometry": { "type": "Point", "coordinates": [ 37.660892, 57.256725 ] } }
+{ "type": "Feature", "properties": { "id": 4110, "settlement": "", "district": "Кашинский", "settlement_2": "Юрьевское", "metrics": "1860-1864, 1884-1886, 1888-1889, 1891-1917", "years": "37", "keeping": "средняя" }, "geometry": { "type": "Point", "coordinates": [ 37.660892, 57.256725 ] } },
+{ "type": "Feature", "properties": { "id": 99999, "settlement": "Весьегонск", "district": "Весьегонский", "settlement_2": "Весьегонск", "metrics": "2 церкви", "years": "", "keeping": "хорошая" }, "geometry": { "type": "Point", "coordinates": [ 37.267601, 58.666 ] } },
+{ "type": "Feature", "properties": { "id": 99999, "settlement": "Красный Холм", "district": "Весьегонский", "settlement_2": "Красный Холм", "metrics": "2 церкви", "years": "", "keeping": "плохая" }, "geometry": { "type": "Point", "coordinates": [ 37.114731, 58.056507 ] } },
+{ "type": "Feature", "properties": { "id": 99999, "settlement": "Вышний Волочёк", "district": "Вышневолоцкий", "settlement_2": "Вышний Волочёк", "metrics": "5 церквей", "years": "", "keeping": "средняя" }, "geometry": { "type": "Point", "coordinates": [ 34.5714, 57.588303 ] } },
+{ "type": "Feature", "properties": { "id": 99999, "settlement": "Бежецк", "district": "Бежецкий", "settlement_2": "Бежецк", "metrics": "14 церквей", "years": "", "keeping": "средняя" }, "geometry": { "type": "Point", "coordinates": [ 36.692535, 57.781357 ] } },
+{ "type": "Feature", "properties": { "id": 99999, "settlement": "Кашин", "district": "Кашинский", "settlement_2": "Кашин", "metrics": "21 церковь", "years": "", "keeping": "хорошая" }, "geometry": { "type": "Point", "coordinates": [ 37.611454, 57.361755 ] } }
 ]
 };
