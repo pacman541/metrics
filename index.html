@@ -129,7 +129,7 @@
 			marker.bindPopup("<b>" + feature.properties.settlement_2 + "</b>" + "<br/>" +  
 			feature.properties.district + " уезд" + "<br/>Сохранившиеся метрики: " + feature.properties.metrics + 
 			"<br/><b>Сохранность: " + feature.properties.keeping);
-			marker.feature.properties.searchItem = marker.feature.properties.settlement_2 + ' | ' + marker.feature.properties.settlement + ', ' + marker.feature.properties.district + ' уезд';
+			feature.properties.searchItem = marker.feature.properties.settlement_2 + ' | ' + marker.feature.properties.settlement + ', ' + marker.feature.properties.district + ' уезд';
             },
 		});
 	
